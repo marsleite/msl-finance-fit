@@ -25,8 +25,20 @@ subprojects {
 
   dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
+    implementation("org.springframework.boot:spring-boot-starter-web") {
+      exclude(module = "spring-boot-starter-tomcat")
+    }
+    implementation("io.projectreactor.kotlin:reactor-kotlin-extensions:1.1.6")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:1.6.4")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+    implementation("commons-collections:commons-collections:3.2.2")
+    implementation("commons-io:commons-io:2.11.0")
+    implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
+    testImplementation("io.mockk:mockk:1.13.3")
   }
 
   tasks.withType<KotlinCompile> {
