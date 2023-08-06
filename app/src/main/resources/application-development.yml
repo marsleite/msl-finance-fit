@@ -1,0 +1,11 @@
+spring:
+  r2dbc:
+    url: r2dbc:mysql://localhost:3306/mslfidev
+    username: root
+    password: secret
+    pool:
+      enabled: true
+      initial-size: 10
+      max-size: 15
+      max-idle-time: 10m
+      validation-depth: remote
