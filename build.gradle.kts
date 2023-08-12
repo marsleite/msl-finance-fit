@@ -65,7 +65,8 @@ val excludeCoverage = listOf(
   "**/*\$logger\$*.class",
   "com.msl.financefit.FinanceFitApplication.kt",
   "com.msl.financefit.FinanceFitApplicationKt",
-  "com.msl.financefit.application.config.*"
+  "com.msl.financefit.application.config.*",
+  "com.msl.financefit.entity.*"
 )
 
 koverReport {
